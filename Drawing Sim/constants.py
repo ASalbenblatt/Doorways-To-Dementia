@@ -15,4 +15,4 @@ lineColor:Final = [0, 0, 0]
 lineThickness:Final = 3
 distanceBetweenPoints:Final = 5
 
-screenScaleFactor:Final = 2
+screenScaleFactor:Final = 1.2

@@ -1,10 +1,15 @@
 from vectorMath import *
 
 def mouseToScreen(mouse: vector, offset: vector) -> vector:
-    return add(add(scaleBy(mouse, 1/screenScaleFactor), (scaleBy(screen.get_size(), 1/(2*screenScaleFactor)))), offset)
+    return add(
+        add(
+            scaleBy(mouse, 1/screenScaleFactor), 
+            (scaleBy(screen.get_size(), 0.5*(1-(1/screenScaleFactor))))), 
+        offset
+        )
 
 def randomOffset() -> vector:
-    return (uniform(-1, 1)*screen.get_width()/(2*screenScaleFactor), uniform(-1, 1)*screen.get_height()/(2*screenScaleFactor))
+    return (uniform(-1, 1)*screen.get_width()*0.5*(1-(1/screenScaleFactor)), uniform(-1, 1)*screen.get_height()*0.5*(1-(1/screenScaleFactor)))
 
 class lines:
     def __init__ (self, initialPosition: vector) -> None:

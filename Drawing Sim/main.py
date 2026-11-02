@@ -24,10 +24,10 @@ while(True):
     '''
     Keys:
     q - quit
-    r - reset
+    r/x - reset
     '''
 
-    if keys[pygame.K_r]:
+    if keys[pygame.K_r] or keys[pygame.K_x]:
         screen.fill([255, 255, 255])
 
     for event in events:
